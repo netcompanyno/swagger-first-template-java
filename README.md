@@ -50,7 +50,16 @@ Typical workflow when working with APIs and data formats:
 1. Change the swagger specification: `src/main/resources/public/api.yml`
 2. Regenerate sources: `mvn clean package`
 3. Resolve potential compilations errors due to changes
-4. Implement new business logic
+4. Implement new business logic by extending generated API interfaces
+    * Do not forget to add `@Controller` to controller classes
+    
+Rinse and repeat...
+
+## Tips and tricks
+* Mark the directory `target/generated-sources/swagger/src/gen/java` as a generated sources root in your IDE if it is not done automatically
+* Web-based swagger editors can be used to edit the swagger specification. E.g. http://editor2.swagger.io
+* Zalando has made a decent IntelliJ swagger editor with code completion: https://github.com/zalando/intellij-swagger
 
 ## Gotchas
-* Sadly, for some reason Spring Web does not recognize parameter annotations in interfaces. These have to be added/copied to the implementing Controllers. 
+* Sadly, for some reason Spring Web does not recognize parameter annotations in interfaces. These have to be added/copied to the implementing Controllers. (E.g. `@RequestParam(value = "message", required = false) String message`)
+* Do not forget to add `@Controller` to controller classes
