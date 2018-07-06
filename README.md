@@ -28,7 +28,7 @@ or simply run the `no.nc.Main` from your IDE.
 ## Live visual documentation
 Live documentation of the running API is available at the root. I.e: 
 
-`http://localhost:8080/`
+<http://localhost:8080/>
 
 The [SpringFox-library](http://springfox.github.io/springfox/) is used to generate the live documentation.
 (Note: The live documentation uses the generated swagger annotations and not the swagger specification file).
@@ -36,7 +36,7 @@ The [SpringFox-library](http://springfox.github.io/springfox/) is used to genera
 ## Live Swagger documentation
 The handwritten swagger specification is made available at this endpoint:
 
-`http://localhost:8080/api.yml`
+<http://localhost:8080/api.yml>
 
 Use this swagger-endpoint in external tooling and clients.
 
@@ -57,8 +57,8 @@ Rinse and repeat...
 
 ## Tips and tricks
 * Mark the directory `target/generated-sources/swagger/src/gen/java` as a generated sources root in your IDE if it is not done automatically
-* Web-based swagger editors can be used to edit the swagger specification. E.g. http://editor2.swagger.io
-* Zalando has made a decent IntelliJ swagger editor with code completion: https://github.com/zalando/intellij-swagger
+* Web-based swagger editors can be used to edit the swagger specification. E.g. <http://editor2.swagger.io>
+* Zalando has made a decent IntelliJ swagger editor with code completion: <https://github.com/zalando/intellij-swagger>
 
 ## Gotchas
 * Sadly, for some reason Spring Web does not recognize parameter annotations in interfaces. These have to be added/copied to the implementing Controllers. (E.g. `@RequestParam(value = "message", required = false) String message`)
