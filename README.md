@@ -30,9 +30,6 @@ Live documentation of the running API is available at the root. I.e:
 
 <http://localhost:8080/>
 
-The [SpringFox-library](http://springfox.github.io/springfox/) is used to generate the live documentation.
-(Note: The live documentation uses the generated swagger annotations and not the swagger specification file).
-
 ## Live Swagger documentation
 The handwritten swagger specification is made available at this endpoint:
 
@@ -57,7 +54,7 @@ Rinse and repeat...
 
 ## Tips and tricks
 * Mark the directory `target/generated-sources/swagger/src/gen/java` as a generated sources root in your IDE if it is not done automatically
-* Web-based swagger editors can be used to edit the swagger specification. E.g. <http://editor2.swagger.io>
+* Web-based swagger editors can be used to edit the swagger specification. E.g. <http://editor.swagger.io>
 * Zalando has made a decent IntelliJ swagger editor with code completion: <https://github.com/zalando/intellij-swagger>
 
 ## Gotchas

@@ -1,17 +1,20 @@
 package no.nc.apidoc;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * Home redirection to swagger api documentation
  */
 @Controller
-@ApiIgnore
 public class HomeController {
+
+    @Value("${swagger-ui.version}")
+    private String swaggerUiVersion;
+
     @RequestMapping(value = "/")
     public String index() {
-        return "redirect:swagger-ui.html";
+        return "redirect:webjars/swagger-ui/" + swaggerUiVersion + "/index.html?url=/api.yml";
     }
 }
